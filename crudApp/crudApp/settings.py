@@ -25,7 +25,7 @@ SECRET_KEY = 'v+i6p@)vkbqd3bdojldfx^nwmudg5m-&93q5_$&srbtjzqfnny'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -122,3 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# added to solve the 'django not serving static files' issue * documentation!!
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+
+]
